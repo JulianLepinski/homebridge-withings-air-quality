@@ -25,6 +25,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: Lol package-lock.json is already rotten
+      run: rm package-lock.json
     - name: Install modules
       run: npm install
     - name: Run build
